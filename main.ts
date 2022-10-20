@@ -1,8 +1,13 @@
 input.onButtonPressed(Button.A, function () {
-    motor.moveClockwise(500, stepUnit.Steps)
+    for (let index = 0; index < 2; index++) {
+        motor.moveClockwise(500, stepUnit.Steps)
+    }
+    for (let index = 0; index < 2; index++) {
+        motor.moveAntiClockwise(500, stepUnit.Steps)
+    }
 })
 input.onButtonPressed(Button.B, function () {
-    motor.moveAntiClockwise(500, stepUnit.Steps)
+    motor.moveAntiClockwise(8000, stepUnit.Steps)
 })
 let motor: stepperMotor.Motor = null
 motor = stepperMotor.createMotor(
